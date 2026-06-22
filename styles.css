@@ -52,7 +52,6 @@ select {
 }
 
 .top-strip {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,8 +65,10 @@ select {
 }
 
 .top-strip .strip-cta {
-  position: absolute;
-  right: clamp(18px, 12vw, 420px);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: clamp(80px, 22vw, 520px);
   color: #ffc526;
 }
 
@@ -105,6 +106,9 @@ select {
 }
 
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 24px 0;
   color: #121417;
 }
@@ -117,9 +121,28 @@ select {
   margin-left: clamp(120px, 12vw, 260px);
 }
 
-.nav-links span {
-  margin-left: 4px;
+.chevron,
+.nav-links .chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  margin-left: 0;
   color: #5b6269;
+  font-size: 0;
+  line-height: 1;
+}
+
+.chevron::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
 }
 
 .nav-actions {
@@ -130,6 +153,7 @@ select {
 }
 
 .icon-btn,
+.language-picker,
 .round-btn,
 .nav-toggle {
   border: 0;
@@ -137,9 +161,28 @@ select {
   color: #111;
 }
 
-.icon-btn {
+.icon-btn,
+.language-picker {
   padding: 8px 4px;
   white-space: nowrap;
+}
+
+.language-picker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  line-height: 1;
+}
+
+.language-select {
+  min-width: 78px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  line-height: 1;
+  outline: 0;
+  cursor: pointer;
 }
 
 .round-btn,
@@ -153,6 +196,9 @@ select {
 }
 
 .sign-in {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 13px 22px;
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -236,6 +282,10 @@ select {
 }
 
 .filter-row button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   min-width: 108px;
   height: 38px;
   border: 0;
@@ -243,6 +293,7 @@ select {
   background: #e8ebee;
   color: #2d3338;
   font-size: 12px;
+  line-height: 1;
 }
 
 .filter-row button.active {
@@ -293,12 +344,15 @@ p {
 }
 
 .small-arrows button {
+  display: grid;
+  place-items: center;
   width: 34px;
   height: 34px;
   border: 0;
   border-radius: 50%;
   background: #e9edf0;
   color: #65707a;
+  line-height: 1;
 }
 
 .spot-grid {
@@ -430,6 +484,7 @@ p {
   height: 28px;
   border-radius: 50%;
   background: #fff;
+  line-height: 1;
 }
 
 .tour-grid .tour-cta {
@@ -455,6 +510,12 @@ p {
   color: #fff;
   font-size: 12px;
   line-height: 1.1;
+}
+
+.tour-grid .tour-cta i {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .tour-grid .tour-cta > span {
@@ -579,6 +640,7 @@ p {
   bottom: 44px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   min-width: 128px;
   padding: 14px 22px;
@@ -587,6 +649,7 @@ p {
   color: #111;
   font-size: 12px;
   font-weight: 650;
+  line-height: 1;
 }
 
 .offer-card.wide span {
@@ -759,6 +822,15 @@ p {
   color: #fff;
   font-size: 12px;
   font-weight: 650;
+  line-height: 1;
+}
+
+.dark-more span,
+.offer-card span i,
+.community-promo span i {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .community-wall {
@@ -974,7 +1046,7 @@ p {
   position: absolute;
   inset: 0;
   background:
-    url("assets/ui/map-bg.png") right 10% top 35px / 410px auto no-repeat,
+    url("assets/optimized/map-bg.webp") right 10% top 35px / 410px auto no-repeat,
     radial-gradient(circle at 94% 72%, rgba(255,255,255,.58), transparent 18%);
   opacity: .7;
 }

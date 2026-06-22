@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Penang Commons - Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260622-2">
 </head>
 <body data-page="home">
   <header class="site-header">
@@ -13,25 +13,31 @@
       <span>THE</span>
       <span>PENANG</span>
       <span>COMMONS</span>
-      <a class="strip-cta" href="page-3.html">Get it now <span>→</span></a>
+      <a class="strip-cta" href="page-3.html"><span data-i18n="common.getItNow">Get it now</span> <span>→</span></a>
     </div>
     <nav class="main-nav" aria-label="Primary">
       <a class="brand" href="page-1.html" aria-label="The Penang Commons home">
-        <img src="assets/ui/brand-logo.png" alt="">
+        <img loading="lazy" decoding="async" src="assets/optimized/brand-logo.webp" alt="">
       </a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
       <div class="nav-links">
-        <a href="page-1.html" class="active">HOME <span>⌄</span></a>
-        <a href="page-2.html">Destination <span>⌄</span></a>
-        <a href="page-2.html#experience">Activity <span>⌄</span></a>
-        <a href="page-3.html">INS <span>⌄</span></a>
+        <a href="page-1.html" class="active"><span data-i18n="nav.home">HOME</span> <span class="chevron">⌄</span></a>
+        <a href="page-2.html"><span data-i18n="nav.destination">Destination</span> <span class="chevron">⌄</span></a>
+        <a href="page-2.html#experience"><span data-i18n="nav.activity">Activity</span> <span class="chevron">⌄</span></a>
+        <a href="page-3.html">INS <span class="chevron">⌄</span></a>
         <a href="page-3.html">Whatsapp</a>
       </div>
       <div class="nav-actions">
-        <button type="button" class="icon-btn" aria-label="Language">◎ EN</button>
-        <button type="button" class="icon-btn" aria-label="Country">Malaysia⌄</button>
+        <label class="language-picker" aria-label="Language">
+          <span>◎</span>
+          <select class="language-select" data-language-select>
+            <option value="en">English</option>
+            <option value="ms">Malay</option>
+            <option value="zh">中文</option>
+          </select>
+        </label>
         <button type="button" class="round-btn" aria-label="Theme">☼</button>
-        <a class="sign-in" href="page-3.html">Sign in</a>
+        <a class="sign-in" href="page-3.html" data-i18n="common.signIn">Sign in</a>
         <a class="grid-btn" href="page-2.html" aria-label="Destination menu">▦</a>
       </div>
     </nav>
@@ -41,21 +47,21 @@
     <section class="search-zone section-narrow">
       <form class="search-bar" action="page-2.html">
         <span class="search-icon">⌕</span>
-        <input type="search" placeholder="What are you looking for ?" aria-label="Search destinations">
-        <button type="submit">Search</button>
+        <input type="search" placeholder="What are you looking for ?" aria-label="Search destinations" data-i18n-placeholder="home.searchPlaceholder">
+        <button type="submit" data-i18n="common.search">Search</button>
       </form>
       <div class="filter-row" aria-label="Filters">
-        <button type="button">category <span>⌄</span></button>
-        <button type="button">duration <span>⌄</span></button>
-        <button type="button">review <span>⌄</span></button>
-        <button type="button">price <span>⌄</span></button>
-        <button type="button">language <span>⌄</span></button>
+        <button type="button"><span data-i18n="filter.category">category</span> <span class="chevron">⌄</span></button>
+        <button type="button"><span data-i18n="filter.duration">duration</span> <span class="chevron">⌄</span></button>
+        <button type="button"><span data-i18n="filter.review">review</span> <span class="chevron">⌄</span></button>
+        <button type="button"><span data-i18n="filter.price">price</span> <span class="chevron">⌄</span></button>
+        <button type="button"><span data-i18n="filter.language">language</span> <span class="chevron">⌄</span></button>
       </div>
     </section>
 
     <section class="section-wide intro-list">
       <div class="section-title-row">
-        <h1>Join us for the exploration</h1>
+        <h1 data-i18n="home.heroTitle">Join us for the exploration</h1>
         <div class="small-arrows" aria-hidden="true">
           <button type="button">‹</button>
           <button type="button">›</button>
@@ -63,43 +69,43 @@
       </div>
       <div class="spot-grid">
         <article class="spot-card">
-          <figure><img src="assets/ui/clan-shop.png" alt="Clan Jetties storefront"></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/optimized/clan-shop.webp" alt="Clan Jetties storefront"></figure>
           <button class="heart" type="button" aria-label="Save Clan Jetties">♡</button>
           <span class="rating">★ 5.00</span>
           <h2>Clan Jetties</h2>
           <div class="card-meta">
-            <p><strong>¥3562</strong> <span>/ person</span></p>
-            <a href="page-2.html">Book</a>
+            <p><strong>99</strong> <span data-i18n="price.perPerson">/ person</span></p>
+            <a href="page-2.html" data-i18n="common.book">Book</a>
           </div>
         </article>
         <article class="spot-card">
-          <figure><img src="assets/ui/little-india-gate.png" alt="Little India street gate"></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/optimized/little-india-gate.webp" alt="Little India street gate"></figure>
           <button class="heart" type="button" aria-label="Save Little India">♡</button>
           <span class="rating">★ 4.96 (672 条评论)</span>
           <h2>Little India</h2>
           <div class="card-meta">
-            <p><strong>¥3562</strong> <span>/ Person</span></p>
-            <a href="page-2.html">Book</a>
+            <p><strong>99</strong> <span data-i18n="price.perPerson">/ person</span></p>
+            <a href="page-2.html" data-i18n="common.book">Book</a>
           </div>
         </article>
         <article class="spot-card">
-          <figure><img src="assets/ui/malay-craft.png" alt="Malay Kampung craft storefront"></figure>
-          <button class="heart" type="button" aria-label="Save Malay Kampung">♡</button>
+          <figure><img loading="lazy" decoding="async" src="assets/optimized/malay-craft.webp" alt="Balik Pulau craft storefront"></figure>
+          <button class="heart" type="button" aria-label="Save Balik Pulau">♡</button>
           <span class="rating">★ 4.96 (672 条评论)</span>
-          <h2>Malay Kampung</h2>
+          <h2>Balik Pulau</h2>
           <div class="card-meta">
-            <p><strong>¥3562</strong> <span>/ Person</span></p>
-            <a href="page-2.html">Book</a>
+            <p><strong>99</strong> <span data-i18n="price.perPerson">/ person</span></p>
+            <a href="page-2.html" data-i18n="common.book">Book</a>
           </div>
         </article>
         <article class="spot-card">
-          <figure><img src="assets/ui/clan-wayfinding.png" alt="Clan Jetties route sign"></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/optimized/clan-wayfinding.webp" alt="Clan Jetties route sign"></figure>
           <button class="heart" type="button" aria-label="Save Clan Jetties route">♡</button>
           <span class="rating">★ 4.96 (672 条评论)</span>
           <h2>Clan Jetties</h2>
           <div class="card-meta">
-            <p><strong>¥1562</strong> <span>/ Person</span></p>
-            <a href="page-2.html">Book</a>
+            <p><strong>99</strong> <span data-i18n="price.perPerson">/ person</span></p>
+            <a href="page-2.html" data-i18n="common.book">Book</a>
           </div>
         </article>
       </div>
@@ -108,19 +114,19 @@
     <section class="tour-band" id="tour">
       <div class="section-wide">
         <div class="tour-head">
-          <h2>Community Tour</h2>
+          <h2 data-i18n="home.communityTour">Community Tour</h2>
         </div>
         <div class="tour-grid">
-          <a href="page-2.html"><img src="assets/ui/clan-billboard.png" alt="Clan Jetties billboard"><span>→</span></a>
-          <a href="page-2.html"><img src="assets/ui/little-india-panels.png" alt="Little India poster panels"><span>→</span></a>
-          <a href="page-2.html"><img src="assets/ui/street-banners.png" alt="Street banner campaign"><span>→</span></a>
-          <a href="page-2.html"><img src="assets/ui/fusion-rollup.png" alt="Community rollup"><span>→</span></a>
-          <a href="page-2.html"><img src="assets/ui/hero-billboard.png" alt="Clan Jetties long billboard"><span>→</span></a>
-          <a href="page-2.html"><img src="assets/ui/brochure-flat.png" alt="Printed brochure set"><span>→</span></a>
-          <a href="page-2.html"><img src="assets/ui/route-book.png" alt="Explorer route guide"><span>→</span></a>
+          <a href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/clan-billboard.webp" alt="Clan Jetties billboard"><span>→</span></a>
+          <a href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/little-india-panels.webp" alt="Little India poster panels"><span>→</span></a>
+          <a href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/street-banners.webp" alt="Street banner campaign"><span>→</span></a>
+          <a href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/fusion-rollup.webp" alt="Community rollup"><span>→</span></a>
+          <a href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/hero-billboard.webp" alt="Clan Jetties long billboard"><span>→</span></a>
+          <a href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/brochure-flat.webp" alt="Printed brochure set"><span>→</span></a>
+          <a href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/route-book.webp" alt="Explorer route guide"><span>→</span></a>
           <a class="tour-cta" href="page-2.html">
-            <span>Create your perfect experience</span>
-            <strong>Browse all destinations <i>→</i></strong>
+            <span data-i18n="home.createExperience">Create your perfect experience</span>
+            <strong><span data-i18n="home.browseAll">Browse all destinations</span> <i>→</i></strong>
           </a>
         </div>
       </div>
@@ -128,26 +134,26 @@
 
     <section class="section-wide learn-more">
       <div class="learn-copy">
-        <img src="assets/ui/brand-logo.png" alt="">
-        <h2>Learn more<br>experiences</h2>
+        <img loading="lazy" decoding="async" src="assets/optimized/brand-logo.webp" alt="">
+        <h2><span data-i18n="home.learnMore">Learn more</span><br><span data-i18n="home.experiences">experiences</span></h2>
         <div class="store-row">
-          <img src="assets/ui/google-play.png" alt="Get it on Google Play">
-          <img src="assets/ui/app-store.png" alt="Download on the App Store">
+          <img loading="lazy" decoding="async" src="assets/optimized/google-play.webp" alt="Get it on Google Play">
+          <img loading="lazy" decoding="async" src="assets/optimized/app-store.webp" alt="Download on the App Store">
         </div>
       </div>
       <div class="learn-mosaic" aria-label="Community goods preview">
-        <div class="mosaic-count"><img src="assets/ui/travel-suitcase.png" alt=""><span>4500+ Goods</span></div>
-        <img src="assets/ui/souvenir-fan.png" alt="Souvenir fan and boxes">
-        <img src="assets/ui/brochure-flat.png" alt="Brochure flat lay">
-        <img src="assets/ui/gift-set.png" alt="Community gift collection">
+        <div class="mosaic-count"><img loading="lazy" decoding="async" src="assets/optimized/travel-suitcase.webp" alt=""><span>4500+ Goods</span></div>
+        <img loading="lazy" decoding="async" src="assets/optimized/souvenir-fan.webp" alt="Souvenir fan and boxes">
+        <img loading="lazy" decoding="async" src="assets/optimized/brochure-flat.webp" alt="Brochure flat lay">
+        <img loading="lazy" decoding="async" src="assets/optimized/gift-set.webp" alt="Community gift collection">
       </div>
     </section>
 
     <section class="section-wide discount-section">
       <div class="section-title-row">
         <div>
-          <h2>Discount offer</h2>
-          <p>We offer competitive fares for your specific route search.</p>
+          <h2 data-i18n="home.discountOffer">Discount offer</h2>
+          <p data-i18n="home.discountCopy">We offer competitive fares for your specific route search.</p>
         </div>
         <div class="small-arrows" aria-hidden="true">
           <button type="button">‹</button>
@@ -155,10 +161,10 @@
         </div>
       </div>
       <div class="offer-strip">
-        <a class="offer-card" href="page-2.html"><img src="assets/ui/little-india-gifts.png" alt="Little India gift set"><span>more <i>→</i></span></a>
-        <a class="offer-card wide" href="page-2.html"><img src="assets/ui/little-india-shirt.png" alt="Little India apparel and lanyard"><span>more <i>→</i></span></a>
-        <a class="offer-card" href="page-2.html"><img src="assets/ui/little-india-panels.png" alt="Little India brochure panels"><span>more <i>→</i></span></a>
-        <a class="offer-card" href="page-2.html"><img src="assets/ui/street-banners.png" alt="Street banners"><span>more <i>→</i></span></a>
+        <a class="offer-card" href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/little-india-gifts.webp" alt="Little India gift set"><span>more <i>→</i></span></a>
+        <a class="offer-card wide" href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/little-india-shirt.webp" alt="Little India apparel and lanyard"><span>more <i>→</i></span></a>
+        <a class="offer-card" href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/little-india-panels.webp" alt="Little India brochure panels"><span>more <i>→</i></span></a>
+        <a class="offer-card" href="page-2.html"><img loading="lazy" decoding="async" src="assets/optimized/street-banners.webp" alt="Street banners"><span>more <i>→</i></span></a>
       </div>
     </section>
   </main>
@@ -166,7 +172,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-call">
-        <img src="assets/ui/brand-logo.png" alt="">
+        <img loading="lazy" decoding="async" src="assets/optimized/brand-logo.webp" alt="">
         <div><span>Please call us.</span><strong>1-800-222-8888</strong></div>
       </div>
       <div class="footer-grid">
